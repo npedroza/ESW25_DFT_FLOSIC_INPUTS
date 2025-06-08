@@ -5,11 +5,11 @@ Since we use desktop computers, we will use only 4 cores for these examples.
 
 You can run the code using the command:
 
-`mpirun -np 4 ~/Desktop/PublicRelease\_2020/flosic/nrlmol\_exe > print`        
+`mpirun -np 4 ~/Desktop/PublicRelease_2020/flosic/nrlmol_exe > print`        
 
 or
 
-`~/Desktop/PublicRelease\_2020/flosic/nrlmol\_exe > print`        
+`~/Desktop/PublicRelease_2020/flosic/nrlmol_exe > print`        
 
   
 In each example directory, there is a sub-directory named start with the required input files.  
