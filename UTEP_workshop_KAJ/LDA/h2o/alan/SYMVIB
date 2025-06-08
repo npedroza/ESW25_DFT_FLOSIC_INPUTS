@@ -1,0 +1,165 @@
+VIBRATIONAL
+LDA-PW91*LDA-PW91        (DF TYPE EXCHANGE*CORRELATION)               
+OLDMESH                                                               
+2  Number of symbolic files
+ISYMVIB = INPUT
+EFLDVIB = EFIELD
+           6   Number of symbols in list
+           3   Number of nuclei
+ 1.0 1 1 1
+ 1.0 1 1 1
+ 1.0 1 1 1
+     1  Vib-Geometry
+ALL-OXY001 =        0.036694        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     2  Vib-Geometry
+ALL-OXY001 =        0.000000        0.036694        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     3  Vib-Geometry
+ALL-OXY001 =        0.000000       -0.036694        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     4  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.036694 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     5  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.491089        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     6  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.417701        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     7  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.155075        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     8  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.081687        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+     9  Vib-Geometry
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.036694 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 0
+    10  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.000000
+EXTRABASIS = 1
+    11  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.005000        0.000000        0.000000
+EXTRABASIS = 1
+    12  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =       -0.005000        0.000000        0.000000
+EXTRABASIS = 1
+    13  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.005000        0.000000
+EXTRABASIS = 1
+    14  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000       -0.005000        0.000000
+EXTRABASIS = 1
+    15  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000        0.005000
+EXTRABASIS = 1
+    16  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.000000       -0.005000
+EXTRABASIS = 1
+    17  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.005000        0.005000        0.000000
+EXTRABASIS = 1
+    18  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =       -0.005000       -0.005000        0.000000
+EXTRABASIS = 1
+    19  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.005000        0.000000        0.005000
+EXTRABASIS = 1
+    20  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =       -0.005000        0.000000       -0.005000
+EXTRABASIS = 1
+    21  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000        0.005000        0.005000
+EXTRABASIS = 1
+    22  Efield-Calculation
+ALL-OXY001 =        0.000000        0.000000        0.000000 UPO    
+ALL-HYD001 =        1.454395        1.118381        0.000000 UPO    
+ALL-HYD002 =       -1.454395        1.118381        0.000000 UPO    
+ELECTRONS  =        5.000000        5.000000
+EFIELD     =        0.000000       -0.005000       -0.005000
+EXTRABASIS = 1

@@ -1,0 +1,719 @@
+ MPI: Number of worker processes=           0
+ No input specified. Running in old mode.
+ **************************************************************** 
+*      ___       ___       ___       ___       ___       ___     *
+*     /\  \     /\__\     /\  \     /\  \     /\  \     /\  \    *
+*    /::\  \   /:/  /    /::\  \   /::\  \   _\:\  \   /::\  \   *
+*   /::\:\__\ /:/__/    /:/\:\__\ /\:\:\__\ /\/::\__\ /:/\:\__\  *
+*   \/\:\/__/ \:\  \    \:\/:/  / \:\:\/__/ \::/\/__/ \:\ \/__/  *
+*      \/__/   \:\__\    \::/  /   \::/  /   \:\__\    \:\__\    *
+*               \/__/     \/__/     \/__/     \/__/     \/__/    *
+*                  FLOSIC Public Release 2020                    *
+* For published work employing this software, please cite        *
+* these articles where it is relevant to your use. BibTex        *
+* citations available in /doc/references/bib                     *
+*                                                                *
+* This software:                                                 *
+* R. R. Zope, Y. Yamamoto, L. Basurto, C. M. Diaz, T. Baruah and *
+* K. A. Jackson, FLOSIC software, https://flosic.org/, based on  *
+* the NRLMOL code of M. R. Pederson.                             *
+*                                                                *
+* Parallelization:                                               *
+* Y. Yamamoto, L. Basurto, C. M. Diaz, R. R. Zope, and T. Baruah,*
+* “Self-interaction correction to density functional             *
+* approximations using Fermi-Loewdin orbitals: Methodology and   *
+* parallelization” (unpublished).                                *
+*                                                                *
+* UTEP NRLMOL:                                                   *
+* C. M. Diaz, L. Basurto, Y. Yamamoto, T. Baruah, and R. R. Zope,*
+* UTEP-NRLMOL code (unpublished).                                *
+*                                                                *
+* NRLMOL basis:                                                  *
+* D. Porezag and M. R. Pederson, Phys. Rev. A: At. Mol. Opt.     *
+* Phys. 60, 2840 (1999).                                         *
+*                                                                *
+* Variational mesh:                                              *
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B: Condens.       *
+* Matter Mater. Phys. 41, 7453 (1990).                           *
+*                                                                *
+* FLOSIC and FLOSIC algorithm:                                   *
+* M. R. Pederson, A. Ruzsinszky, and J. P. Perdew, J. Chem. Phys.*
+* 140, 121103 (2014); Z. Yang, M. R. Pederson, and J. P. Perdew, *
+* Phys. Rev. A 95, 052505 (2017).                                *
+*                                                                *
+* FLOSIC-SCAN/-rSCAN, FLOSIC-libxc, or integration by parts:     *
+* Y. Yamamoto, C. M. Diaz, L. Basurto, K. A. Jackson, T. Baruah  *
+* and R. R. Zope, J. Chem. Phys. 151, 154105 (2019); Y. Yamamoto,*
+* A. Salcedo, C. M. Diaz, M. S. Alam, T. Baruah and R. R. Zope,  *
+* Phys. Chem. Chem. Phys. 22, 18060 (2020).                      *
+*                                                                *
+* ADSIC, Slater averaging of SIC potential, FLOSIC-KLI:          *
+* C. M. Diaz, T. Baruah, and R. R. Zope, Phys. Rev. A 103, 042811*
+* (2021); C. M. Diaz, P. Suryanarayana, Q. Xu, T. Baruah, J. E.  *
+* Pask, and R. R. Zope, J. Chem. Phys. 154, 084112 (2021).       *
+ **************************************************************** 
+FLOSIC software is based on NRLMOL
+NRLMOL version 12/23/2013 
+ 
+Copyright by Mark R. Pederson, Koblar A. Jackson, Dirk V. Porezag,
+and David C. Patton, 1988-2001
+ 
+Permission to use, copy, and distribute this software can only be
+granted by the authors. Please contact nrlmol@dave.nrl.navy.mil
+for questions, updates, modifications, and bug reports.
+ 
+If you use this program please cite the following articles:
+ 
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B. 41, 7453 (1990)
+* K. A. Jackson and M. R. Pederson, Phys. Rev. B. 42, 3276 (1990)
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B. 43, 7312 (1991)
+* A. A. Quong, M. R. Pederson, and J. L. Feldman,
+  Solid State Commun. 87, 535 (1993)
+* D. V. Porezag and M. R. Pederson, Phys. Rev. B. 54, 7830 (1996)
+* D. V. Porezag, PhD thesis: http://archiv.tu-chemnitz.de/pub/1997/0025
+* A. Briley, M. R. Pederson, K. A. Jackson, D. C. Patton, and
+  D. V. Porezag,Phys. Rev. B. 58, 1786 (1998)
+ 
+MPI VERSION
+CALCULATION OF SIC MATRIX IN GROUPS
+GROUP CALCULATION REQUIRES 3 OR MORE PROCS
+
+
+
+GLOBAL AWAKENING ON:
+Thu Jun  5 04:54:33 PM EDT 2025
+CPU NODE:
+dev-intel18
+Linux dev-intel18 5.15.0-126-generic #136-Ubuntu SMP Wed Nov 6 10:38:22 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+ SCF calculation
+ 
+ LIST OF PARAMETERS USED FOR THIS ADVENTURE
+ MXSPN=(           2 )
+ MAX_PTS=(     1000000 )
+ MAX_FUSET=(          12 )
+ MAX_IDENT=(          65 )
+ MX_CNT=(MX_CNT)
+ MXATMS=(          80 )
+ MX_CNT=(          80 )
+ NMUPMAX=(           7 )
+ MAX_BARE=(          25 )
+ MAX_CON=(          25 )
+ MAX_OCC=(        1100 )
+ MAXUNSYM=(          70 )
+ NDH=(        1350 )
+ NDH_TOT=(      911925 )
+ MX_GRP=(          24 )
+ MAX_REP=(          10 )
+ MAXSLC=(         350 )
+ LOCMAX=(         360 )
+ ISMAX=(          32 )
+ MAXSYMSALC=(          32 )
+ MXRPSP=(         100 )
+ MXPTAB=(         100 )
+ MXLPSP=(           2 )
+ MXKPT=(           1 )
+ MPBLOCK=(         100 )
+ MPBLOCKXC=(        1000 )
+ MXPOISS=(         100 )
+ NSPEED=(          25 )
+ LDIM=(           3 )
+ CUTEXP=(   40.000000000000000      )
+ MX_SPH=(        5300 )
+ MAX_VIRT_PER_SYM=(        2100 )
+ MAXGFIT=(          15 )
+ MAXLSQF=(          50 )
+ MTEMP=(      147000 )
+ KRHOG=(          10 )
+ C   DONE....
+READING AND ANALYZING GROUP MATRICES
+GENERATING SYMBOL FILE FROM DATA IN FILE CLUSTER
+GENERATING ISYMGEN FILE FROM DATA IN FILE CLUSTER
+ATOM TYPE   1 (ALL-FLU): NUCLEAR CHARGE=   9,   1 ATOM(S)
+ 
+RELAXATION MODE: LBFGS                              
+FUNC2NUM: functional string: LDA-PW91
+FUNC2NUM: func_id:  -1
+ LDA-PW91*LDA-PW91        (DF TYPE E is not libxc FUNCTIONAL TYPE
+EXCHANGE    FUNCTIONAL: LDA
+CORRELATION FUNCTIONAL: LDA PERDEW-WANG 91           
+DETERMINING SYMMETRY GROUP
+NUMBER OF REPRESENTATIONS:  1
+DIMENSIONS: 1
+ CHARACTERS OF SYMMETRY OPERATIONS IN GRPMAT:
+IRREP 1:  1.0
+CHECKING GREAT ORTHOGONALITY THEOREM
+CHECKING MULTIPLICATION TABLE
+REPRESENTATION  1 IS OK
+CHECKING GROUP REPRESENTATION
+GROUP REPRESENTATION IS OK
+CHECKING S REPRESENTATION
+S REPRESENTATION IS OK
+CHECKING P REPRESENTATION
+P REPRESENTATION IS OK
+CHECKING D REPRESENTATION:
+D REPRESENTATION IS OK
+TOTAL NUMBER OF FAILED TESTS:   0
+READING ATOMIC AND BASIS SET DATA
+SCF FOR ATOM TYPE   1 SUCCESSFUL, EIGENVALUES: 
+    -24.18903     -1.08668      0.11374      1.19074      9.71050
+     -0.41543      0.19822      1.07445      4.12449
+      0.68792      2.34866      6.26149
+CHARGE ERROR IN DENSITY FIT:   0.00638332 (CORRECTED)
+POTENTIAL AND DENSITY FITS ARE OK
+TESTING BASIS SET
+ TESTBAS: back from OVERLAP. TIME:   0.0000000000000000     
+ TESTBAS: pre-diag time   0.0000000000000000     
+ TESTBAS:diag time   2.0000000000000018E-002
+ 
+CREATING VARIATIONAL INTEGRATION MESH
+ORIGINAL IDENTITY MEMBERS:
+ATOM   1:     0.000000     0.000000     0.000000, Z=    9.00000
+INFINITY RADIUS IS:       10.61
+ 
+NUMBER OF UNIQUE ATOMS:     1
+COORDINATES OF ATOMIC CUBES:
+        0.000000        0.000000        0.000000
+ 
+THE CAKE WILL BE SLICED RIGHT NOW !
+CHECKING IF ADJACENT ATOMS ARE TOO CLOSE TO ATOMIC CUBES
+REMOVING SYMMETRY-EQUIVALENT BOXES
+CHECKING FOR REDUCIBLE BOXES
+ 
+FINAL BOX SET:
+BOX     1, MULTIPLICITY:   1, IDENTITY MEMBER:   1
+CENTER     0.000000     0.000000     0.000000
+SIZE      21.210353    21.210353    21.210353
+LOWEST LDA POTENTIAL FOR INTERSTITIAL REGIONS:      0.00000
+TOTAL VOLUME:   0.954209342010D+04, CORRECT:   0.954209342010D+04
+ 
+ASSIGNING POINTS TO CUBES THAT CONTAIN ATOMS
+NUMBER OF POINTS FOR ATOMIC CUBES:      21140
+ASSIGNING POINTS TO INTERSTITIAL BOXES
+TOTAL NUMBER OF MESH POINTS:            21140
+REORDERING MESH POINTS
+TOTAL NUMBER OF SPHERES:   232
+SPHERE INFORMATION: RADIUS, VOLUME, NUMBER OF POINTS, POINT DENSITY
+MINIMUM:      0.558      0.726        2      0.005
+MAXIMUM:      4.460    371.634     2363   3255.503
+AVERAGE:      2.038    102.520       91    105.293
+WORST ASPECT RATIO:      1.000 : 1
+ 
+TEST INTEGRATION FOR BARE GAUSSIANS
+ 
+ ID-MEM   BEST ALPHA   BEST ERROR   WORST ALPHA  WORST ERROR
+------------------------------------------------------------
+    1      0.11E+05     0.29E-10      0.33E+05     0.34E-07
+ 
+ DIAGGE3:Calling DSPGVD
+LARGEST S-DIAGONAL ERROR:   0.3450D-08
+LARGEST S-GENERAL  ERROR:   0.3450D-08
+LARGEST S-EIGEN    ERROR:   0.1662D-05
+TIME FOR CONSTRUCTION OF VARIATIONAL MESH:          0.100
+TIME FOR MESH REORDERING:                           0.010
+TIME FOR MESH READING / TESTING + WRITING:          0.040
+ NMSH is        21140
+ TRACER:CALLING GLOBAL_CALL(64)
+ allocating sic matrix        1100        1100           2
+ 
+ITERATION   1
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.000
+USING STANDARD HAMILTONIAN ROUTINE
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.000
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   9.9999999999999534E-003
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.189207, OCCUP=     1.000000
+STATE    2, EV=       -1.086606, OCCUP=     1.000000
+STATE    3, EV=       -0.415378, OCCUP=     1.000000
+STATE    4, EV=       -0.415378, OCCUP=     1.000000
+STATE    5, EV=       -0.415378, OCCUP=     1.000000
+STATE    6, EV=      -24.189207, OCCUP=     1.000000
+STATE    7, EV=       -1.086606, OCCUP=     1.000000
+STATE    8, EV=       -0.415378, OCCUP=     0.666667
+STATE    9, EV=       -0.415378, OCCUP=     0.666667
+STATE   10, EV=       -0.415378, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999999714775     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999999714775     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.050
+TRACE OF HAMILTONIAN:         -52.628517
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.160     21140
+ TOTAL TIME FOR LSD COUL  0.16000000000000003     
+TOTAL CHARGE IN APOTNL:         8.999999990825
+DIPOLE MOMENT:  -0.127129366382D-14   0.247180892534D-14   0.964881987029D-15
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.160
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.170
+================================================
+TOTAL ENERGY:                         -99.110149
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.684308
+MEAN-FIELD COULOMB:                    49.533638
+KINETIC+NONLOCAL POTENTIAL:            98.673230
+EXCHANGE-CORRELATION:                  -9.632710
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.110149
+================================================
+ TIME FOR ITERATION:  0.23000000000000004     
+ 
+ITERATION   2
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.020
+ after normh 1
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   0.0000000000000000     
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.202558, OCCUP=     1.000000
+STATE    2, EV=       -1.113482, OCCUP=     1.000000
+STATE    3, EV=       -0.441647, OCCUP=     1.000000
+STATE    4, EV=       -0.441647, OCCUP=     1.000000
+STATE    5, EV=       -0.441647, OCCUP=     1.000000
+STATE    6, EV=      -24.175202, OCCUP=     1.000000
+STATE    7, EV=       -1.057499, OCCUP=     1.000000
+STATE    8, EV=       -0.387140, OCCUP=     0.666667
+STATE    9, EV=       -0.387140, OCCUP=     0.666667
+STATE   10, EV=       -0.387140, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999999007931     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999999007931     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.020
+TRACE OF HAMILTONIAN:         -52.647960
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.170     21140
+ TOTAL TIME FOR LSD COUL  0.17000000000000010     
+TOTAL CHARGE IN APOTNL:         8.999999990774
+DIPOLE MOMENT:  -0.173408030641D-13  -0.188080600406D-15  -0.872755216558D-15
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.170
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.180
+================================================
+TOTAL ENERGY:                         -99.111003
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.758904
+MEAN-FIELD COULOMB:                    49.573518
+KINETIC+NONLOCAL POTENTIAL:            98.713869
+EXCHANGE-CORRELATION:                  -9.639486
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111003
+================================================
+ TIME FOR ITERATION:  0.25000000000000006     
+ 
+ITERATION   3
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.020
+BROYDEN MIXING OF HAMILTONIAN
+ hammix writing           2
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   0.0000000000000000     
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.201593, OCCUP=     1.000000
+STATE    2, EV=       -1.113208, OCCUP=     1.000000
+STATE    3, EV=       -0.441370, OCCUP=     1.000000
+STATE    4, EV=       -0.441370, OCCUP=     1.000000
+STATE    5, EV=       -0.441370, OCCUP=     1.000000
+STATE    6, EV=      -24.173798, OCCUP=     1.000000
+STATE    7, EV=       -1.056758, OCCUP=     1.000000
+STATE    8, EV=       -0.386432, OCCUP=     0.666667
+STATE    9, EV=       -0.386432, OCCUP=     0.666667
+STATE   10, EV=       -0.386432, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999998993134     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999998993134     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.010
+TRACE OF HAMILTONIAN:         -52.642332
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.180     21140
+ TOTAL TIME FOR LSD COUL  0.17999999999999994     
+TOTAL CHARGE IN APOTNL:         8.999999990769
+DIPOLE MOMENT:  -0.833096904590D-14   0.375968654466D-14   0.588234870959D-15
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.180
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.190
+================================================
+TOTAL ENERGY:                         -99.111013
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.743869
+MEAN-FIELD COULOMB:                    49.565970
+KINETIC+NONLOCAL POTENTIAL:            98.705413
+EXCHANGE-CORRELATION:                  -9.638526
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111013
+================================================
+ TIME FOR ITERATION:  0.25999999999999979     
+ 
+ITERATION   4
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.020
+BROYDEN MIXING OF HAMILTONIAN
+ hammix writing           3
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   0.0000000000000000     
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.199728, OCCUP=     1.000000
+STATE    2, EV=       -1.112784, OCCUP=     1.000000
+STATE    3, EV=       -0.440933, OCCUP=     1.000000
+STATE    4, EV=       -0.440933, OCCUP=     1.000000
+STATE    5, EV=       -0.440933, OCCUP=     1.000000
+STATE    6, EV=      -24.170717, OCCUP=     1.000000
+STATE    7, EV=       -1.055042, OCCUP=     1.000000
+STATE    8, EV=       -0.384800, OCCUP=     0.666667
+STATE    9, EV=       -0.384800, OCCUP=     0.666667
+STATE   10, EV=       -0.384800, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999999120188     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999999120188     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.020
+TRACE OF HAMILTONIAN:         -52.630670
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.160     21140
+ TOTAL TIME FOR LSD COUL  0.15999999999999992     
+TOTAL CHARGE IN APOTNL:         8.999999990774
+DIPOLE MOMENT:  -0.647042587323D-13   0.605289668272D-13  -0.106761708048D-13
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.160
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.180
+================================================
+TOTAL ENERGY:                         -99.111029
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.713031
+MEAN-FIELD COULOMB:                    49.550461
+KINETIC+NONLOCAL POTENTIAL:            98.688128
+EXCHANGE-CORRELATION:                  -9.636587
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111029
+================================================
+ TIME FOR ITERATION:  0.26000000000000001     
+ 
+ITERATION   5
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.040
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+BROYDEN MIXING OF HAMILTONIAN
+ hammix writing           4
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   0.0000000000000000     
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.200640, OCCUP=     1.000000
+STATE    2, EV=       -1.113687, OCCUP=     1.000000
+STATE    3, EV=       -0.441798, OCCUP=     1.000000
+STATE    4, EV=       -0.441798, OCCUP=     1.000000
+STATE    5, EV=       -0.441798, OCCUP=     1.000000
+STATE    6, EV=      -24.169796, OCCUP=     1.000000
+STATE    7, EV=       -1.054010, OCCUP=     1.000000
+STATE    8, EV=       -0.383853, OCCUP=     0.666667
+STATE    9, EV=       -0.383853, OCCUP=     0.666667
+STATE   10, EV=       -0.383853, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999999201568     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999999201568     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.000
+TRACE OF HAMILTONIAN:         -52.631234
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.170     21140
+ TOTAL TIME FOR LSD COUL  0.16999999999999993     
+TOTAL CHARGE IN APOTNL:         8.999999990783
+DIPOLE MOMENT:  -0.411009510284D-13   0.140681676237D-13  -0.138237892961D-13
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.170
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.180
+================================================
+TOTAL ENERGY:                         -99.111036
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.716729
+MEAN-FIELD COULOMB:                    49.552190
+KINETIC+NONLOCAL POTENTIAL:            98.690500
+EXCHANGE-CORRELATION:                  -9.636998
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111036
+================================================
+ TIME FOR ITERATION:  0.25000000000000000     
+ 
+ITERATION   6
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.020
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.020
+BROYDEN MIXING OF HAMILTONIAN
+ hammix writing           5
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   0.0000000000000000     
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.200657, OCCUP=     1.000000
+STATE    2, EV=       -1.113718, OCCUP=     1.000000
+STATE    3, EV=       -0.441827, OCCUP=     1.000000
+STATE    4, EV=       -0.441827, OCCUP=     1.000000
+STATE    5, EV=       -0.441827, OCCUP=     1.000000
+STATE    6, EV=      -24.169733, OCCUP=     1.000000
+STATE    7, EV=       -1.053965, OCCUP=     1.000000
+STATE    8, EV=       -0.383811, OCCUP=     0.666667
+STATE    9, EV=       -0.383811, OCCUP=     0.666667
+STATE   10, EV=       -0.383811, OCCUP=     0.666667
+ ELECTRON :   5.0000000000000000        3.9999999998884306     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999998884306     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.010
+TRACE OF HAMILTONIAN:         -52.631178
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.170     21140
+ TOTAL TIME FOR LSD COUL  0.16999999999999993     
+TOTAL CHARGE IN APOTNL:         8.999999990751
+DIPOLE MOMENT:  -0.564600832409D-13  -0.622684076174D-14  -0.791131166513D-14
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+TIME FOR REDUCED DERIVATIVES OF RHO:                 0.000
+TIME FOR GORBDRV EXECUTION:                          0.000
+TIME FOR COULOMB POTENTIAL + RHO AND RHODRV:         0.170
+TIME FOR COMPLETE APOTNL EXECUTION:                  0.180
+================================================
+TOTAL ENERGY:                         -99.111036
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.716601
+MEAN-FIELD COULOMB:                    49.552128
+KINETIC+NONLOCAL POTENTIAL:            98.690434
+EXCHANGE-CORRELATION:                  -9.636997
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111036
+================================================
+ TIME FOR ITERATION:  0.25000000000000000     
+ 
+ITERATION   7
+=============
+ CALLING NEWWAVE_serial
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+USING STANDARD HAMILTONIAN ROUTINE
+ NMSH:       21140  IN NUMHAM
+TIME FOR POTENTIAL MATRIX ELEMENTS:                 0.030
+BROYDEN MIXING OF HAMILTONIAN
+ hammix writing           6
+CONSTRUCTING NEW WAVEFUNCTIONS
+ NSPN=           2
+SPIN 1:
+ IREP=           1 ISPN=           1
+ Time required for DIAGGE   1.0000000000000231E-002
+SPIN 2:
+ IREP=           1 ISPN=           2
+ Time required for DIAGGE   0.0000000000000000     
+ OPTIMIZED MOMENT  MODE :
+ NVIRTTOT=           70
+ NVIRTTOT before trace =           70
+STATE    1, EV=      -24.200642, OCCUP=     1.000000
+STATE    2, EV=       -1.113730, OCCUP=     1.000000
+STATE    3, EV=       -0.441839, OCCUP=     1.000000
+STATE    4, EV=       -0.441839, OCCUP=     1.000000
+STATE    5, EV=       -0.441839, OCCUP=     1.000000
+STATE    6, EV=      -24.169671, OCCUP=     1.000000
+STATE    7, EV=       -1.053978, OCCUP=     1.000000
+STATE    8, EV=       -0.383821, OCCUP=     0.666670
+STATE    9, EV=       -0.383821, OCCUP=     0.666666
+STATE   10, EV=       -0.383821, OCCUP=     0.666665
+ ELECTRON :   5.0000000000000000        3.9999999999179661     
+ NVIRTTOT after trace =           70
+ ELECTRONS OF SPIN UP :    5.0000000000000000     
+ ELECTRONS OF SPIN DN :    3.9999999999179661     
+ NVIRTTOT before EVALXXX =           70
+TIME FOR CONSTRUCTION OF NEW WAVEFUNCTIONS:         0.010
+TRACE OF HAMILTONIAN:         -52.631177
+CALCULATING KOHN-SHAM POTENTIAL ON MESH POINTS
+NUMBER OF POINTS IN COUPOT:      21140
+LONG  CHARGE IN COUPOT:         9.000000
+TOTAL CHARGE IN COUPOT:         9.000000
+TIME FOR COULOMB POTENTIAL,NMSH:       0.150     21140
+ TOTAL TIME FOR LSD COUL  0.14999999999999991     
+TOTAL CHARGE IN APOTNL:         8.999999990780
+DIPOLE MOMENT:   0.865452595217D-13   0.297464658845D-14  -0.576506715459D-15
+TIME FOR EXCHANGE-CORRELATION:                      0.010
+ 
+SELF-CONSISTENCY REACHED, CALCULATING FORCES
+TIME FOR HELLMANN-FEYNMAN FORCES:                   0.000
+TIME FOR NONLOCAL CONTRIBUTION TO FORCES:           0.000
+TIME FOR PULAY CORRECTIONS TO FORCES:               0.220
+ 
+HERE ARE THE FORCES:
+====================
+ATOM   1, POSITION:     0.000000000000     0.000000000000     0.000000000000
+HELLMANN-FEYNMAN:       0.188983281497D-12 0.570960790329D-12 -.457113777049D-12
+NONLOCAL FORCE:         0.000000000000D+00 0.000000000000D+00 0.000000000000D+00
+PULAY CORRECTION:       -.315125951216D-12 0.123833269968D-12 -.796172480814D-12
+PULAY CORRECTION1:      -.937336864742D-13 -.141535796443D-12 -.184652662655D-12
+PULAY CORRECTION2:      -.251296662082D-12 -.796191614593D-13 -.582738903062D-12
+TOTAL:              -.126142669719D-12 0.694794060297D-12 -.125328625786D-11
+ 
+================================================
+TOTAL ENERGY:                         -99.111036
+CONTRIBUTIONS:
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.716322
+MEAN-FIELD COULOMB:                    49.552027
+KINETIC+NONLOCAL POTENTIAL:            98.690244
+EXCHANGE-CORRELATION:                  -9.636984
+EXTERNAL ELECTRIC FIELD:                0.000000
+SELF-INTERACTION ENERGY:                0.000000
+TOTAL ENERGY + SIC ENERGY:            -99.111036
+================================================
+ TIME FOR ITERATION:  0.46000000000000019     
+ FROZENDENSITY1  F
+ FOD_CONVERGE,SCF_CONVERGENCE F T
+ HUZZAH! FODS and SCF BOTH CONVERGED
+ 
+SUMMARY OF ENERGY CONTRIBUTIONS:
+================================
+TOTAL ENERGY:                         -99.111036
+NUCLEAR REPULSION:                      0.000000
+LOCAL POTENTIAL:                     -237.716322
+MEAN-FIELD COULOMB:                    49.552027
+NONLOCAL POTENTIAL:                     0.000000
+KINETIC:                               98.690244
+LOCAL EXCHANGE:                        -8.999090
+LOCAL CORRELATION:                     -0.637894
+NONLOCAL EXCHANGE:                      0.000000
+NONLOCAL CORRELATION:                   0.000000
+EXTERNAL ELECTRIC FIELD:                0.000000
+ 
+CARTESIAN LBFGS UPDATE OF NUCLEAR POSITIONS
+ENTERING OPTIMIZATION CYCLE:   1
+
+FORCES CONVERGED - NO UPDATE NECESSARY
+ **COMPILE WITHOUT DMPI FOR POTRHOGRD
+ 
+TIME FOR EXECUTION OF UNRAVEL (PART 1):             0.030
+TIME FOR EXECUTION OF UNRAVEL (PART 2):             0.000
+TIME FOR EXECUTION OF THIS NEAT PROGRAM:            2.130
+HOPE TO SEE YOU AGAIN VERY SOON :-)
+  
+ MPI: Total Wall clock TIME =    3.3014997089999998     
+  
+ ***********************
+ MPI Node       CPU time
+ -----------------------
+ ************************************************

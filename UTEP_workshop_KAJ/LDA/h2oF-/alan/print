@@ -1,0 +1,145 @@
+ MPI: Number of worker processes=           4
+ No input specified. Running in old mode.
+ **************************************************************** 
+*      ___       ___       ___       ___       ___       ___     *
+*     /\  \     /\__\     /\  \     /\  \     /\  \     /\  \    *
+*    /::\  \   /:/  /    /::\  \   /::\  \   _\:\  \   /::\  \   *
+*   /::\:\__\ /:/__/    /:/\:\__\ /\:\:\__\ /\/::\__\ /:/\:\__\  *
+*   \/\:\/__/ \:\  \    \:\/:/  / \:\:\/__/ \::/\/__/ \:\ \/__/  *
+*      \/__/   \:\__\    \::/  /   \::/  /   \:\__\    \:\__\    *
+*               \/__/     \/__/     \/__/     \/__/     \/__/    *
+*                  FLOSIC Public Release 2020                    *
+* For published work employing this software, please cite        *
+* these articles where it is relevant to your use. BibTex        *
+* citations available in /doc/references/bib                     *
+*                                                                *
+* This software:                                                 *
+* R. R. Zope, Y. Yamamoto, L. Basurto, C. M. Diaz, T. Baruah and *
+* K. A. Jackson, FLOSIC software, https://flosic.org/, based on  *
+* the NRLMOL code of M. R. Pederson.                             *
+*                                                                *
+* Parallelization:                                               *
+* Y. Yamamoto, L. Basurto, C. M. Diaz, R. R. Zope, and T. Baruah,*
+* “Self-interaction correction to density functional             *
+* approximations using Fermi-Loewdin orbitals: Methodology and   *
+* parallelization” (unpublished).                                *
+*                                                                *
+* UTEP NRLMOL:                                                   *
+* C. M. Diaz, L. Basurto, Y. Yamamoto, T. Baruah, and R. R. Zope,*
+* UTEP-NRLMOL code (unpublished).                                *
+*                                                                *
+* NRLMOL basis:                                                  *
+* D. Porezag and M. R. Pederson, Phys. Rev. A: At. Mol. Opt.     *
+* Phys. 60, 2840 (1999).                                         *
+*                                                                *
+* Variational mesh:                                              *
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B: Condens.       *
+* Matter Mater. Phys. 41, 7453 (1990).                           *
+*                                                                *
+* FLOSIC and FLOSIC algorithm:                                   *
+* M. R. Pederson, A. Ruzsinszky, and J. P. Perdew, J. Chem. Phys.*
+* 140, 121103 (2014); Z. Yang, M. R. Pederson, and J. P. Perdew, *
+* Phys. Rev. A 95, 052505 (2017).                                *
+*                                                                *
+* FLOSIC-SCAN/-rSCAN, FLOSIC-libxc, or integration by parts:     *
+* Y. Yamamoto, C. M. Diaz, L. Basurto, K. A. Jackson, T. Baruah  *
+* and R. R. Zope, J. Chem. Phys. 151, 154105 (2019); Y. Yamamoto,*
+* A. Salcedo, C. M. Diaz, M. S. Alam, T. Baruah and R. R. Zope,  *
+* Phys. Chem. Chem. Phys. 22, 18060 (2020).                      *
+*                                                                *
+* ADSIC, Slater averaging of SIC potential, FLOSIC-KLI:          *
+* C. M. Diaz, T. Baruah, and R. R. Zope, Phys. Rev. A 103, 042811*
+* (2021); C. M. Diaz, P. Suryanarayana, Q. Xu, T. Baruah, J. E.  *
+* Pask, and R. R. Zope, J. Chem. Phys. 154, 084112 (2021).       *
+ **************************************************************** 
+FLOSIC software is based on NRLMOL
+NRLMOL version 12/23/2013 
+ 
+Copyright by Mark R. Pederson, Koblar A. Jackson, Dirk V. Porezag,
+and David C. Patton, 1988-2001
+ 
+Permission to use, copy, and distribute this software can only be
+granted by the authors. Please contact nrlmol@dave.nrl.navy.mil
+for questions, updates, modifications, and bug reports.
+ 
+If you use this program please cite the following articles:
+ 
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B. 41, 7453 (1990)
+* K. A. Jackson and M. R. Pederson, Phys. Rev. B. 42, 3276 (1990)
+* M. R. Pederson and K. A. Jackson, Phys. Rev. B. 43, 7312 (1991)
+* A. A. Quong, M. R. Pederson, and J. L. Feldman,
+  Solid State Commun. 87, 535 (1993)
+* D. V. Porezag and M. R. Pederson, Phys. Rev. B. 54, 7830 (1996)
+* D. V. Porezag, PhD thesis: http://archiv.tu-chemnitz.de/pub/1997/0025
+* A. Briley, M. R. Pederson, K. A. Jackson, D. C. Patton, and
+  D. V. Porezag,Phys. Rev. B. 58, 1786 (1998)
+ 
+MPI VERSION
+CALCULATION OF SIC MATRIX IN GROUPS
+
+
+
+GLOBAL AWAKENING ON:
+Thu Jun  5 06:30:47 PM EDT 2025
+CPU NODE:
+lac-327
+Linux lac-327 5.15.0-126-generic #136-Ubuntu SMP Wed Nov 6 10:38:22 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+ SCF calculation
+ 
+ LIST OF PARAMETERS USED FOR THIS ADVENTURE
+ MXSPN=(           2 )
+ MAX_PTS=(     1000000 )
+ MAX_FUSET=(          12 )
+ MAX_IDENT=(          65 )
+ MX_CNT=(MX_CNT)
+ MXATMS=(          80 )
+ MX_CNT=(          80 )
+ NMUPMAX=(           7 )
+ MAX_BARE=(          25 )
+ MAX_CON=(          25 )
+ MAX_OCC=(        1100 )
+ MAXUNSYM=(          70 )
+ NDH=(        1350 )
+ NDH_TOT=(      911925 )
+ MX_GRP=(          24 )
+ MAX_REP=(          10 )
+ MAXSLC=(         350 )
+ LOCMAX=(         360 )
+ ISMAX=(          32 )
+ MAXSYMSALC=(          32 )
+ MXRPSP=(         100 )
+ MXPTAB=(         100 )
+ MXLPSP=(           2 )
+ MXKPT=(           1 )
+ MPBLOCK=(         100 )
+ MPBLOCKXC=(        1000 )
+ MXPOISS=(         100 )
+ NSPEED=(          25 )
+ LDIM=(           3 )
+ CUTEXP=(   40.000000000000000      )
+ MX_SPH=(        5300 )
+ MAX_VIRT_PER_SYM=(        2100 )
+ MAXGFIT=(          15 )
+ MAXLSQF=(          50 )
+ MTEMP=(      147000 )
+ KRHOG=(          10 )
+ C   DONE....
+CLUSTER: YOU CONVERGED TO THE FINAL ANSWER
+GEOMETRY OPTIMIZED ON:    5 CYCLES
+TO START ANEW, REMOVE FILE GEOCNVRG AND RERUN
+ 
+TIME FOR EXECUTION OF UNRAVEL (PART 1):             0.000
+TIME FOR EXECUTION OF UNRAVEL (PART 2):             0.000
+TIME FOR EXECUTION OF THIS NEAT PROGRAM:            0.000
+HOPE TO SEE YOU AGAIN VERY SOON :-)
+  
+ MPI: Total Wall clock TIME =    6.9233021000000006E-002
+  
+ ***********************
+ MPI Node       CPU time
+ -----------------------
+     1             0.00
+     2             0.00
+     3             0.00
+     4             0.00
+ ************************************************

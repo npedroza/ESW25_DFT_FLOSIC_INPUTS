@@ -1,0 +1,6 @@
+LDA-PW91*LDA-PW91            (DF TYPE EXCHANGE*CORRELATION)
+NONE                         (NONE, OH, IH, X, Y, XY, ... OR GRP)
+2
+   0.00000000     0.00000000     0.91547492    8  ALL (R, Z, ALL-ELECTRON)
+   0.00000000     0.00000000    -0.91547492    1  ALL (R, Z, ALL-ELECTRON)
+ 0.000   1.000                     (NET CHARGE AND NET SPIN)

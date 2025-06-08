@@ -1,0 +1,240 @@
+  
+  SUMMARY OF BASIS SET:
+  NUMBER OF CONTRACTED FUNCTION SETS:           3
+  
+  FUNCTION SET:           1
+ FS:  1 IP:  1 POSITION:       0.000000       0.000000       0.000000
+ CONTRACTED ORBITALS FOR ANGULAR TYPE S:           5
+ CONTRACTED ORBITALS FOR ANGULAR TYPE P:           4
+ CONTRACTED ORBITALS FOR ANGULAR TYPE D:           3
+ GAUSSIANS FOR FUNCTION SET:
+   0.612E+05  0.919E+04  0.209E+04   594.       194.       69.8       26.9    
+    10.9       4.57       1.88      0.755      0.292      0.105    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           0
+   0.248      0.464      0.800       1.29       1.91       2.48       2.57    
+    1.71      0.486      0.213E-01  0.388E-03 -0.127E-03  0.181E-04
+  -0.584E-01 -0.109     -0.188     -0.306     -0.463     -0.635     -0.742    
+  -0.651     -0.285      0.195      0.300      0.121      0.730E-02
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           1
+   0.480E-01  0.767E-01  0.149      0.224      0.368      0.500      0.676    
+   0.739      0.710      0.495      0.213      0.573E-01  0.628E-02
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           2
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       1.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00    
+  
+  FUNCTION SET:           2
+ FS:  2 IP:  1 POSITION:       1.450000       1.120000       0.000000
+ FS:  2 IP:  2 POSITION:      -1.450000       1.120000       0.000000
+ CONTRACTED ORBITALS FOR ANGULAR TYPE S:           4
+ CONTRACTED ORBITALS FOR ANGULAR TYPE P:           3
+ CONTRACTED ORBITALS FOR ANGULAR TYPE D:           1
+ GAUSSIANS FOR FUNCTION SET:
+    77.8       11.5       2.61      0.732      0.228      0.745E-01
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           0
+   0.377E-01  0.704E-01  0.113      0.139      0.109      0.359E-01
+    0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           1
+    0.00       0.00       1.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           2
+    0.00       0.00       0.00       1.00       0.00       0.00    
+  
+  FUNCTION SET:           3
+ FS:  3 IP:  1 POSITION:       0.000000      20.000000       0.000000
+ CONTRACTED ORBITALS FOR ANGULAR TYPE S:           5
+ CONTRACTED ORBITALS FOR ANGULAR TYPE P:           4
+ CONTRACTED ORBITALS FOR ANGULAR TYPE D:           3
+ GAUSSIANS FOR FUNCTION SET:
+   0.123E+06  0.187E+05  0.428E+04  0.122E+04   402.       146.       56.9    
+    23.5       10.0       4.34       1.87      0.781      0.315      0.118    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           0
+   0.236      0.438      0.752       1.22       1.85       2.55       3.00    
+    2.68       1.41      0.261      0.256E-02  0.755E-03 -0.165E-03  0.208E-04
+  -0.558E-01 -0.104     -0.179     -0.289     -0.447     -0.634     -0.815    
+  -0.854     -0.645     -0.114      0.317      0.304      0.101      0.482E-02
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       1.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           1
+   0.490E-01  0.906E-01  0.157      0.255      0.397      0.582      0.785    
+   0.971       1.02      0.888      0.533      0.210      0.536E-01  0.560E-02
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       1.00    
+ CONTRACTED ORBITALS FOR ANGULAR MOMENTUM:           2
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       1.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       1.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       0.00       0.00    
+    0.00       0.00       0.00       0.00       0.00       1.00       0.00    
+ TOTAL NUMBER OF CONTRACTED ORBITALS:         108
+  
+ REPRESENTATION:           1  HAS:         108  BASES
+TRACE OF HAMILTONIAN:         -95.459959
+TOTAL ENERGY:       -174.95676323
+TRACE OF HAMILTONIAN:         -85.333205
+TOTAL ENERGY:       -159.96576027
+TRACE OF HAMILTONIAN:         -89.700226
+TOTAL ENERGY:       -174.95273723
+TRACE OF HAMILTONIAN:         -89.527238
+TOTAL ENERGY:       -175.08585548
+TRACE OF HAMILTONIAN:         -89.111439
+TOTAL ENERGY:       -175.16594525
+TRACE OF HAMILTONIAN:         -89.467228
+TOTAL ENERGY:       -175.14345733
+TRACE OF HAMILTONIAN:         -88.808584
+TOTAL ENERGY:       -173.58882174
+TRACE OF HAMILTONIAN:         -89.040831
+TOTAL ENERGY:       -173.63360969
+TRACE OF HAMILTONIAN:         -89.866293
+TOTAL ENERGY:       -175.12596691
+TRACE OF HAMILTONIAN:         -89.410103
+TOTAL ENERGY:       -175.15284212
+TRACE OF HAMILTONIAN:         -89.308238
+TOTAL ENERGY:       -175.15736696
+TRACE OF HAMILTONIAN:         -89.222336
+TOTAL ENERGY:       -175.16110505
+TRACE OF HAMILTONIAN:         -89.140703
+TOTAL ENERGY:       -175.16448903
+TRACE OF HAMILTONIAN:         -89.014926
+TOTAL ENERGY:       -175.16834271
+TRACE OF HAMILTONIAN:         -88.963519
+TOTAL ENERGY:       -175.15338294
+TRACE OF HAMILTONIAN:         -88.975271
+TOTAL ENERGY:       -175.09278376
+TRACE OF HAMILTONIAN:         -89.054233
+TOTAL ENERGY:       -175.16759361
+TRACE OF HAMILTONIAN:         -89.011889
+TOTAL ENERGY:       -175.16857533
+TRACE OF HAMILTONIAN:         -88.999904
+TOTAL ENERGY:       -175.16963342
+TRACE OF HAMILTONIAN:         -88.958899
+TOTAL ENERGY:       -173.81391082
+TRACE OF HAMILTONIAN:         -90.141105
+TOTAL ENERGY:       -175.10001308
+TRACE OF HAMILTONIAN:         -89.585806
+TOTAL ENERGY:       -175.14286514
+TRACE OF HAMILTONIAN:         -89.249403
+TOTAL ENERGY:       -175.16109605
+TRACE OF HAMILTONIAN:         -89.122720
+TOTAL ENERGY:       -175.16581669
+TRACE OF HAMILTONIAN:         -89.029584
+TOTAL ENERGY:       -175.16830991
+TRACE OF HAMILTONIAN:         -88.985159
+TOTAL ENERGY:       -175.17166200
+TRACE OF HAMILTONIAN:         -88.957559
+TOTAL ENERGY:       -173.67842395
+TRACE OF HAMILTONIAN:         -90.708122
+TOTAL ENERGY:       -175.04973909
+TRACE OF HAMILTONIAN:         -89.640686
+TOTAL ENERGY:       -175.14085989
+TRACE OF HAMILTONIAN:         -89.177355
+TOTAL ENERGY:       -175.16431762
+TRACE OF HAMILTONIAN:         -89.085038
+TOTAL ENERGY:       -175.16708660
+TRACE OF HAMILTONIAN:         -88.976810
+TOTAL ENERGY:       -175.16940931
+TRACE OF HAMILTONIAN:         -88.845637
+TOTAL ENERGY:       -173.58843146
+TRACE OF HAMILTONIAN:         -89.065576
+TOTAL ENERGY:       -175.16753746
+TRACE OF HAMILTONIAN:         -89.054916
+TOTAL ENERGY:       -175.16775240
+TRACE OF HAMILTONIAN:         -89.023848
+TOTAL ENERGY:       -175.16825766
+TRACE OF HAMILTONIAN:         -89.020519
+TOTAL ENERGY:       -175.16832480
+TRACE OF HAMILTONIAN:         -88.980083
+TOTAL ENERGY:       -175.17038401
+TRACE OF HAMILTONIAN:         -88.977978
+TOTAL ENERGY:       -175.17121621
+TRACE OF HAMILTONIAN:         -88.977991
+TOTAL ENERGY:       -175.17121423
+TRACE OF HAMILTONIAN:         -88.973620
+TOTAL ENERGY:       -175.17155346
+TRACE OF HAMILTONIAN:         -88.981032
+TOTAL ENERGY:       -175.17091618
+TRACE OF HAMILTONIAN:         -88.971612
+TOTAL ENERGY:       -175.16977187
+TRACE OF HAMILTONIAN:         -88.987601
+TOTAL ENERGY:       -175.17005380
+TRACE OF HAMILTONIAN:         -88.971547
+TOTAL ENERGY:       -175.16819952
+TRACE OF HAMILTONIAN:         -88.990314
+TOTAL ENERGY:       -175.16984432
+TRACE OF HAMILTONIAN:         -88.932840
+TOTAL ENERGY:       -174.75390384
+TRACE OF HAMILTONIAN:         -88.987642
+TOTAL ENERGY:       -175.17027583
+TRACE OF HAMILTONIAN:         -88.985780
+TOTAL ENERGY:       -175.17076637
+TRACE OF HAMILTONIAN:         -88.988303
+TOTAL ENERGY:       -175.16979014
+TRACE OF HAMILTONIAN:         -88.988467
+TOTAL ENERGY:       -175.16959124
+TRACE OF HAMILTONIAN:         -88.986357
+TOTAL ENERGY:       -175.16279647
+TRACE OF HAMILTONIAN:         -89.002080
+TOTAL ENERGY:       -175.16910763
+TRACE OF HAMILTONIAN:         -88.996023
+TOTAL ENERGY:       -175.17100783
+TRACE OF HAMILTONIAN:         -88.993989
+TOTAL ENERGY:       -175.16962327
+TRACE OF HAMILTONIAN:         -89.001163
+TOTAL ENERGY:       -175.17044314
+TRACE OF HAMILTONIAN:         -88.996668
+TOTAL ENERGY:       -175.17008671
+TRACE OF HAMILTONIAN:         -89.001896
+TOTAL ENERGY:       -175.17112122
+TRACE OF HAMILTONIAN:         -88.998829
+TOTAL ENERGY:       -175.16969272
+TRACE OF HAMILTONIAN:         -89.003764
+TOTAL ENERGY:       -175.17117626
+TRACE OF HAMILTONIAN:         -89.000768
+TOTAL ENERGY:       -175.16996295
+TRACE OF HAMILTONIAN:         -89.047333
+TOTAL ENERGY:       -175.16823577
+TRACE OF HAMILTONIAN:         -89.015125
+TOTAL ENERGY:       -175.17095715
+TRACE OF HAMILTONIAN:         -89.005072
+TOTAL ENERGY:       -175.17148141
+TRACE OF HAMILTONIAN:         -89.007279
+TOTAL ENERGY:       -175.17162726
+TRACE OF HAMILTONIAN:         -89.007801
+TOTAL ENERGY:       -175.17161216
+TRACE OF HAMILTONIAN:         -89.011298
+TOTAL ENERGY:       -175.17160081
+TRACE OF HAMILTONIAN:         -89.012106
+TOTAL ENERGY:       -175.17160859
+TRACE OF HAMILTONIAN:         -89.011987
+TOTAL ENERGY:       -175.17162148
+TRACE OF HAMILTONIAN:         -89.011975
+TOTAL ENERGY:       -175.17162094
+TRACE OF HAMILTONIAN:         -89.011987
+TOTAL ENERGY:       -175.17161702

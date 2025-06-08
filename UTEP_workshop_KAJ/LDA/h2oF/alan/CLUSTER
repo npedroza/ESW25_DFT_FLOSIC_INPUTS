@@ -1,0 +1,9 @@
+LDA-PW91*LDA-PW91        (DF TYPE EXCHANGE*CORRELATION)
+XZ                       (TD, OH, IH, X, Y, XY, ... OR GRP)
+3                        (NUMBER OF INEQUIV. ATOMS IN CH4)
+0.00  0.00  0.00  8  ALL (R, Z, PSEUDOPOT. TYPE FOR CARBON)
+1.45  1.12  0.00  1  ALL (R, Z, PSEUDOPOT. TYPE FOR HYDROGEN)
+0.00  4.00  0.00  9  ALL
+0.0 1.0                  (NET CHARGE AND NET SPIN)
+ --------------OR-------------------
+@XMOL.DAT
